@@ -57,7 +57,7 @@
     background-color: var(--btn-bg-color);
     -webkit-background-clip: text; /* para esse webkit ser funcional, temos que usar o background-clip. */
     background-clip: text;
-    color: transparent;
+    color: transparent; /* temos que deixar transparent para conseguir pegar a cor do background-color, pois o color text é mais forte do que o background-color, ou seja, priorizar o color text sempre. */
     position: relative;
     z-index: 1;
   }
