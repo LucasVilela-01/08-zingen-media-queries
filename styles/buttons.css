@@ -2,7 +2,6 @@
   --btn-bg-color: var(--text-color-primary);
   --btn-color: var(--bg-color);
   border: 0;
-  background-color: transparent;
 
   display: flex;
   align-items: center;
@@ -20,8 +19,7 @@
   color: var(--btn-color);
 
   &:hover {
-    --btn-bg-color: linear-gradient(90deg, var(--brand-color-secondary) 0%, 
-    var(--brand-color-primary) 100%);
+    --btn-bg-color: linear-gradient(90deg, var(--brand-color-secondary) 0%, var(--brand-color-primary) 100%);
     --btn-color: var(--surface-color);
 
     -webkit-background-clip: initial;
@@ -52,13 +50,13 @@
     content: "";
     position: absolute;
     border-radius: inherit;
-    inset: 0.09375rem;
+    inset: 1px;
     background-color: var(--bg-color);
   }
 
   &::after {
-    content: attr(arial-label);
-    background-color: var(--btn-bg-color);
+    content: attr(aria-label);
+    background: var(--btn-bg-color);
     -webkit-background-clip: text; /* para esse webkit ser funcional, temos que usar o background-clip. */
     background-clip: text;
     color: transparent; /* temos que deixar transparent para conseguir pegar a cor do background-color, pois o color text é mais forte do que o background-color, ou seja, priorizar o color text sempre. */
